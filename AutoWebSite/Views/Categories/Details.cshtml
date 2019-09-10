@@ -1,0 +1,34 @@
+﻿@model BusinessLogicLayer.CategorieBLL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategorieID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.CategorieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

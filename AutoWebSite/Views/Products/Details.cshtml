@@ -1,0 +1,114 @@
+﻿@model BusinessLogicLayer.ProductBLL
+
+@{
+    ViewBag.Title = "Detils";
+}
+
+<h2>Detils</h2>
+
+<div>
+    <h4>ProductBLL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductsID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductsID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WinningofferID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WinningofferID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ProductsID  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

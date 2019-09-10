@@ -1,0 +1,92 @@
+﻿@model IEnumerable<BusinessLogicLayer.UserBLL>
+
+
+@{
+    ViewBag.Title = "User";
+    int PageNumber = ViewBag.PageNumber;
+    int PageSize = ViewBag.PageSize;
+    int TotalCount = ViewBag.TotalCount;
+    int TotalPageButtonCount = ((0 == TotalCount % PageSize) ? 0 : 1) + TotalCount / PageSize;
+}
+
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@{
+    for (int i = 0; i < TotalPageButtonCount; i++)
+    {
+        string classstring = (i == PageNumber) ? "btn btn-sm btn-success glyphicon glyphicon-star-empty" : "btn btn-sm btn-normal glyphicon glyphicon-asterisk";
+        @Html.ActionLink($"-Page {i}-", "Page", new { PageNumber = i, PageSize = PageSize },
+       new { @class = classstring });
+
+    }
+}
+
+
+<p>
+   
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAdderess)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAdderess)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+            </td>
+        </tr>
+    }
+
+</table>

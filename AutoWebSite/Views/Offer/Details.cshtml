@@ -1,0 +1,98 @@
+﻿@model BusinessLogicLayer.OfferBLL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.offerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Offerprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Offerprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offerstate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offerstate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpireDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpireDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAdderess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAdderess)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.offerID  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
